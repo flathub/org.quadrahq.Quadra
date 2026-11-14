@@ -17,14 +17,6 @@ finish-args:
   - --socket=pulseaudio
   - --device=dri
   - --talk-name=org.kde.StatusNotifierWatcher
-  - --filesystem=xdg-run/discord-ipc-0
-  - --filesystem=xdg-run/app/com.discordapp.Discord:create
-  - --filesystem=xdg-run/app/com.discordapp.DiscordCanary:create
-  - --filesystem=xdg-run/app/dev.vencord.Vesktop:create
-  - --filesystem=xdg-run/.flatpak/dev.vencord.Vesktop:create
-  - --filesystem=xdg-run/snap.discord:create
-  - --filesystem=xdg-data/butter/runners:ro
-  - --filesystem=~/.var/app/io.github.microlift.butter/data/butter/runners:ro
 build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
 modules:
@@ -46,6 +38,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/QuadraHQ/quadra.git
-        tag: v0.50.0
-        commit: 38621054f101ef0e5749d10370ea0f4e8a0514b8
+        tag: v0.50.1
+        commit: 7b5792b6db75537fe96fca9b1ea53d38145c0a76
       - cargo-sources.json
