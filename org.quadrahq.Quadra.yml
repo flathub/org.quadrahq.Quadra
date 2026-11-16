@@ -31,12 +31,12 @@ modules:
         cargo --offline build --release --locked
       - install -Dm755 target/release/quadra -t /app/bin/
       - install -Dm644 LICENSE -t /app/share/licenses/quadra/
-      - install -Dm644 data/icons/org.quadrahq.Quadra.png -t /app/share/icons/hicolor/256x256/apps/
+      - mkdir -p /app/share/icons && cp -r data/icons/hicolor /app/share/icons/
       - install -Dm644 flatpak/org.quadrahq.Quadra.desktop -t /app/share/applications/
-      - install -Dm644 flatpak/org.quadrahq.Quadra.metainfo.xml -t /app/share/metainfo/
       - install -Dm644 data/org.quadrahq.Quadra.xml -t /app/share/mime/packages/
+      - install -Dm644 flatpak/org.quadrahq.Quadra.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: git
         url: https://github.com/QuadraHQ/quadra.git
-        commit: e77924d568e0047d31f5d859cd32b35bd86c5f01
+        commit: 5dfb472462924d100b7654b48a587cd79243770f
       - cargo-sources.json
