@@ -76,5 +76,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/QuadraHQ/quadra.git
-        commit: a021917d6c4785dc777eaa2e2801cee2f6a28e40
+        commit: c5f887cd81afe1274ea6cbcbd933034f51428ae4
       - cargo-sources.json
